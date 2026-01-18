@@ -1,0 +1,26 @@
+def binarySearch(arr, targetVal):
+  left = 0 #first element
+  right = len(arr) - 1 #last element
+
+  while left <= right:
+    mid = (left + right) // 2 #assign mid variable to the index of themidpoint
+
+    if arr[mid] == targetVal: #compare mid to the item you wnat to find
+      return mid #returns the value of mid if it is the desired item
+
+    if arr[mid] < targetVal: #sees if the target is larger than the mid
+      left = mid + 1 #if it is then the index of the first element is reassigned as the index of the midpoint + 1
+    else:
+      right = mid - 1 #if it is not then the index of the last element is reassigned as the index of the midpoint - 1
+
+  return -1
+
+mylist = list(range(1,100000000)) # the data you what to search
+x = 50000000 #the number you wnat to find
+
+result = binarySearch(mylist, x)
+
+if result != -1:
+  print("Found at index", result)
+else:
+  print("Not found")

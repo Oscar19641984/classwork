@@ -1,0 +1,30 @@
+START 
+
+class Cost 
+private Price1 
+private Price2 
+private TotalPrice 
+
+public procedure initialise (Price1, Price2) 
+Price1 = 0 
+Price2 = 0 
+TotalPrice = TotalPrice 
+endprocedure 
+
+public procedure CalcPrice (Price1, Price2, TotalPrice) 
+TotalPrice = Price1 + Price2 
+endCalcPrice 
+
+pubic procedure ShowPrice (Price1, Price2, TotalPrice) 
+OUPTPUT TotalPrice 
+endShowPrice 
+
+endclass 
+
+Price1= INPUT"Whats the first price" 
+Price2= INPUT"Whats the second price" 
+SET calculation = (Price1, Price2) 
+calculation.CalcPrice 
+calculation.ShowPrice 
+
+END
